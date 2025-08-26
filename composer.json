@@ -1,0 +1,26 @@
+{
+    "name": "lara-pack/model-history",
+    "description": "Model History",
+    "require": {
+        "doctrine/dbal": "^4.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LaraPack\\ModelHistory\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bhagaskara",
+            "email": "bhagaskaraliancer@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraPack\\ModelHistory\\ModelHistoryProvider"
+            ]
+        }
+    }
+}
