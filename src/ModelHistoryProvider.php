@@ -10,7 +10,15 @@ class ModelHistoryProvider extends ServiceProvider
     /**
      * Register any application services.
      */
-    public function register(): void {}
+    public function register(): void
+    {
+        $this->commands([
+            Commands\CleanHistoryCommand::class,
+            Commands\InjectHasHistoryCommand::class,
+            Commands\InjectHasCompleteHistoryCommand::class,
+            Commands\SyncHistoryCommand::class,
+        ]);
+    }
 
     /**
      * Bootstrap any application services.
