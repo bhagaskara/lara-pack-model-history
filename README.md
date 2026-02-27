@@ -10,10 +10,24 @@ A simple yet powerful Laravel package to track every change in your Eloquent mod
 - **Contextual Tracking**: Store the URL where the action occurred (`recorded_url`).
 - **Automated Metadata**: Manage `created_by`, `updated_by`, and `deleted_by` fields automatically.
 - **Bulk Injection**: Commands to inject traits into all your models at once.
+- **Easy Cleanup**: Built-in command to prune old history records.
+
+## Requirements
+
+- **PHP**: ^8.2
+- **Laravel**: ^10.0 or ^11.0
 
 ## Installation
 
-Since this is a local package, you can add it to your `composer.json` using a path repository:
+You can install the package via composer:
+
+```bash
+composer require lara-pack/model-history
+```
+
+### Local Installation (Development)
+
+If you are developing locally and haven't published the package yet, you can add it to your `composer.json` using a path repository:
 
 ```json
 "repositories": [
@@ -47,7 +61,13 @@ This command scans your models and generates migrations for your history tables.
 php artisan lara-pack:sync-history
 ```
 
-_Migrations will be created in `database/migrations/histories/Y_m_d/`._
+Then run the migration command to apply the changes:
+
+```bash
+php artisan migrate
+```
+
+_Migrations will be created in `database/migrations/histories/Y_m_d/` and are automatically loaded by the package._
 
 #### 2. Bulk Inject Traits
 

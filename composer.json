@@ -1,26 +1,28 @@
 {
-    "name": "lara-pack/model-history",
-    "description": "Model History",
-    "require": {
-        "doctrine/dbal": "^4.3"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "LaraPack\\ModelHistory\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Bhagaskara",
-            "email": "bhagaskaraliancer@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "LaraPack\\ModelHistory\\ModelHistoryProvider"
-            ]
-        }
+  "name": "lara-pack/model-history",
+  "description": "Model History",
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^10.0|^11.0",
+    "doctrine/dbal": "^3.0|^4.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "LaraPack\\ModelHistory\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Bhagaskara",
+      "email": "bhagaskaraliancer@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaraPack\\ModelHistory\\ModelHistoryProvider"
+      ]
+    }
+  }
 }
